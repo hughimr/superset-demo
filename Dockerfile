@@ -18,7 +18,9 @@ RUN adduser superset && \
 WORKDIR /home/superset
 COPY superset .
 RUN chmod -R 777 .
+RUN cp superset_config.py .superset/
 VOLUME /home/superset/.superset
+
 # Deploy application
 EXPOSE 8088 3306
 HEALTHCHECK CMD ["curl", "-f", "http://localhost:8088/health"]

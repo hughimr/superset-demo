@@ -49,3 +49,7 @@ docker run --detach --name superset-new [options] amancevice/superset
 # Upgrade the DB
 docker exec superset-new superset db upgrade
 ```
+
+
+#注：
+自己运行需要自己去mapbox.com注册access token key。然后修改superset_config.py中的MAPBOX_API_KEY
