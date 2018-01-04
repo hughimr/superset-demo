@@ -53,3 +53,6 @@ docker exec superset-new superset db upgrade
 
 #注：
 自己运行需要自己去mapbox.com注册access token key。然后修改superset_config.py中的MAPBOX_API_KEY
+
+重要：
+如果要在宿主机连接容器中的mysql需要修改容器中／etc／mysql/my.cnf 中的bind_address=0.0.0.0
